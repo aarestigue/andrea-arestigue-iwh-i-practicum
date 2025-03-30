@@ -16,10 +16,10 @@ const PRIVATE_APP_ACCESS = '';
 
 app.get('/', async (req, res) => {
     const getTrainings = 'https://api.hubapi.com/crm/v3/objects/trainings';
-    //const headers = {
-      //  Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
-      //  'Content-Type': 'application/json'
-    //}
+    const headers = {
+        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+        'Content-Type': 'application/json'
+    }
     try {
         //const resp = await axios.post(contacts, { headers });
         //const data = resp.data.results;
