@@ -1,15 +1,28 @@
-//- ** This is a sample of a pug template and how it uses the data passed to it from index.js.
+//- This is a sample of a pug template and how it uses the data passed to it from index.js.
 
-//- doctype html
-//- html 
-//-     head 
-//-         title= `${title}`
-//-         meta(name="viewport" content="width=device-width, initial-scale=1")
-//-         link(rel="stylesheet", href="/css/style.css")
-//-     body    
-//-         h1 Contacts
-//-         .cards 
-//-             each contact in data
-//-                 .card 
-//-                     h2.card__name #{contact.properties.firstname}  #{contact.properties.lastname}
-//-                     p.card__email #{contact.properties.email}
+doctype html
+html 
+    head 
+        title Update Custom Object Form | Integrating With HubSpot I Practicum.
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        a(href="/") Home
+        h1 Update a Training
+        hr
+        .form-wrapper
+            h2 Submit Training Info
+            form(action="/submit-training", method="POST")
+                label(for="name") Name:
+                input(type="text", name="name", id="name", required)
+                br
+
+                label(for="startDate") Training Start Date:
+                input(type="date", name="startDate", id="startDate", required)
+                br
+
+                label(for="topic") Training Topic:
+                input(type="text", name="topic", id="topic", required)
+                br
+
+                button(type="submit") Submit
