@@ -21,9 +21,8 @@ app.get('/', async (req, res) => {
         'Content-Type': 'application/json'
     }
     try {
-        //const resp = await axios.post(contacts, { headers });
-        //const data = resp.data.results;
-        const data = "data"
+        const resp = await axios.get(getTrainings, { headers });
+        const data = resp.data.results;
         res.render('updates', { title: 'Contacts | HubSpot APIs', data });      
     } catch (error) {
         console.error(error);
