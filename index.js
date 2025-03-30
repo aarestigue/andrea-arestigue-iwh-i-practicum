@@ -15,13 +15,13 @@ const PRIVATE_APP_ACCESS = '';
 // * Code for Route 1 goes here
 
 app.get('/', async (req, res) => {
-    //const contacts = 'https://api.hubspot.com/crm/v3/objects/contacts';
+    const getTrainings = 'https://api.hubapi.com/crm/v3/objects/trainings';
     //const headers = {
       //  Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
       //  'Content-Type': 'application/json'
     //}
     try {
-        //const resp = await axios.get(contacts, { headers });
+        //const resp = await axios.post(contacts, { headers });
         //const data = resp.data.results;
         const data = "data"
         res.render('updates', { title: 'Contacts | HubSpot APIs', data });      
